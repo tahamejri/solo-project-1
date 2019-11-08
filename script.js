@@ -130,3 +130,10 @@ $('body').on('click','#allcars', function(){
 
 
 
+$('#submitaddcar').on('click',function(){
+	var carname = $('#carName').val()
+console.log(carname)
+})
+
+
+
