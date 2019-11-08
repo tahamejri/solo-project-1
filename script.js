@@ -11,11 +11,11 @@ function createCar(name,model, engine, value, img){
 var blueE30 = createCar('huricane','e30', 'M52','20k$','https://i.pinimg.com/originals/16/e0/69/16e069abedb17e3f40d6755f9fffb2de.jpg')
 var rede30 = createCar('Bad blood','e30', 'M20','12k$','https://i.imgur.com/tBPyEBt.jpg')
 var Blacke30 = createCar('Night Blood','e30', 'M50 turbo','22k$','http://speedhunters-wp-production.s3.amazonaws.com/wp-content/uploads/2016/06/15084308/2016-Players-Classic-Spotlight-BMW-E30-by-Paddy-McGrath-9-1200x800.jpg')
-var rede36 = createCar('E36','e30', 'M50','18k$','https://www.auto-forever.com/wp-content/uploads/2017/02/100_E36_3-series_1993-1996_coupe-1030x773.jpg')
+var rede36 = createCar('E36','e46', 'M50','18k$','https://www.auto-forever.com/wp-content/uploads/2017/02/100_E36_3-series_1993-1996_coupe-1030x773.jpg')
 var huricane = createCar('invinsible','e30', 'M43','12k$','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXD84p6B9GTmiBSPa-TADWVEBVl3uaI2Wb_vz9rZQQ8yQ_es8&s')
-var rain = createCar('stay tuned','e30', 'M50','16k$','https://i.ytimg.com/vi/a9_qppChhTo/maxresdefault.jpg')
-var redee36 = createCar('etra spicy','e30', 'M50','31k$','https://seegerdezign.com/wp-content/uploads/2018/03/e36-seeger-bumper-720x321.jpg')
-var danha  = createCar('nowa','e30', 'M20','12k$','https://previews.123rf.com/images/evrenkalinbacak/evrenkalinbacak1601/evrenkalinbacak160100459/50394478-istanbul-turquie-31-octobre-2015-ozer-mollamehmetoglu-conduit-bmw-m3-e36-turbo-de-nankang-%C3%A9quipe-de-dr.jpg')
+var rain = createCar('stay tuned','e36', 'M50','16k$','https://i.ytimg.com/vi/a9_qppChhTo/maxresdefault.jpg')
+var redee36 = createCar('etra spicy','e36', 'M50','31k$','https://seegerdezign.com/wp-content/uploads/2018/03/e36-seeger-bumper-720x321.jpg')
+var danha  = createCar('nowa','e36', 'M20','12k$','https://previews.123rf.com/images/evrenkalinbacak/evrenkalinbacak1601/evrenkalinbacak160100459/50394478-istanbul-turquie-31-octobre-2015-ozer-mollamehmetoglu-conduit-bmw-m3-e36-turbo-de-nankang-%C3%A9quipe-de-dr.jpg')
 var helloz = createCar('see you','e30', 'M20','12k$','https://i.ytimg.com/vi/rrNIfxh-KwE/maxresdefault.jpg')
 var x = createCar('oups','e30', 'M20','12k$','https://www.driftworks.com/forum/attachments/276874/')
 var y = createCar('extra love','e30', 'M20','12k$','https://c.wallhere.com/photos/f9/43/car_YASIDDESIGN_render_artwork_BMW_BMW_M3_E46_BMW_E46_race_cars-46145.jpg!d')
@@ -38,24 +38,24 @@ $('#opennav').hover( function(){
 	
 	$("#navbar").css("display", "block") ; 
 	$('#opennav').hide() ;
-	console.log('you clicked') ;
+	
 })
 
 $('#closenav').on('click', function(){
 	
 	$("#navbar").css("display", "none") ;
 	$('#opennav').show() ; 
-	console.log('you clicked close')
+	
 })
 
 
-$('#b1').on('click', function(){
-	var strAdded = $('#added').val()
-	var optstr = $('<option></option>')
-	optstr.text(strAdded)
-	optstr.appendTo('#slt')	
+// $('#b1').on('click', function(){
+// 	var strAdded = $('#added').val()
+// 	var optstr = $('<option></option>')
+// 	optstr.text(strAdded)
+// 	optstr.appendTo('#slt')	
 
-})
+// })
 
 
 //display all cars
@@ -82,7 +82,6 @@ display(carsArr)
 
 
 $('body').on('click','.imagediv', function() {																							 
-	console.log($(this.html))
 	$('#showelement').show()
 
 	$('#showelement').find('img').remove()
@@ -103,7 +102,7 @@ var result = undefined ;
 	return result;
 }
 
-console.log('hi')
+
 
 
 
@@ -111,12 +110,9 @@ $('body').on('click','.sidebuttons', function(){
 	var key = this.id.split('') ;
 	key.splice(3,1)
 	var realkey = key.join('')
-	console.log(realkey)
+	
 
 	var result = search(carsArr,realkey)
-	
-	console.log('it worked')
-	console.log(result)
 	display(result)	
 })
 
@@ -155,5 +151,16 @@ else{$('#addCar').hide()
 
 $('#addCar').hide()
 
+var x 
+$('body').on('click','.imagediv', function() {
+x = $(this).find('model')
+	console.log(x);
+	
+	})
 
+$('#main').hide()
 
+$('#homebtn').on('click',function(){
+	$('#main').show()
+	console.log('homebutton')
+})

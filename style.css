@@ -1,6 +1,6 @@
 #main{
 	display:flex;
-	border: solid red;
+	border: solid;
 	width: 70%;
 	height:auto;
 	margin-left:22%;
@@ -34,7 +34,7 @@ header ul li a {
     font-weight: bold;
 }
 header a:hover {
-    color: yellow;
+    color: #d50000;
 }
 
 
@@ -46,8 +46,8 @@ body {
   margin: 0;
   min-height: 100%;
   overflow-x: hidden;
-  background-image: url("https://hdwallpapers.imgix.net/wallpaper-44961567349687qvhvd3vdpa.jpg?auto=compress&cs=tinysrgb&dpr=1");
-  
+  background-image: url("https://wallpaperplay.com/walls/full/9/d/5/321465.jpg");
+  background-attachment: fixed;
   background-size: 100%;
 }
 
@@ -82,7 +82,7 @@ background: #1E2A37;
 
 #navbar {
   left : 0;
-  border: solid blue;
+  border: solid ;
   height: 540px;
   width: 20%;
   top:65px;
@@ -141,7 +141,7 @@ background: #1E2A37;
   	display: block;
   	list-style-type:none;
   	width: 200px;
-  	border: solid orange;
+  	border: solid ;
   	
   }
 
@@ -251,10 +251,11 @@ nav{
 	position: fixed ;
 	width:20%;
 	height: 60%;
-	border: solid red;
 	top : 58px;
 	left: 120px;
 	display: ;
+	background-image: url('https://i.pinimg.com/originals/12/66/99/126699df02bed52a2f46b6d5d5664d9e.jpg');
+	background-size: 100%;
 }
 form {
 	text-decoration-color: white;
@@ -271,3 +272,4 @@ form {
 #addcarr: hover{
 	cursor: pointer
 }
+
