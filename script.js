@@ -2,7 +2,7 @@
 
 $('#opennav').on('click', function(){
 	
-	$("#navbar").css("display", "") ; 
+	$("#navbar").css("display", "block") ; 
 	console.log('you clicked')
 })
 
@@ -56,7 +56,7 @@ var reert30 = createCar('winter','M57','12k$','https://judsonconcept.com/img/avt
 var reduy0 = createCar('black moon','M51','12k$','https://i.ytimg.com/vi/b71ZJPL6JPc/maxresdefault.jpg')
 
 
-var carsArr = [reduy0, reert30, rprue30, rfge30, r390, rede3ui0, rede3try0, redety30, reezde30, ze, z, y, x, helloz, danha, redee36, rain, huricane, rede36, Blacke30, rede30, blueE30]
+var carsArr = [reduy0, reert30, rprue30, rfge30, r390, rede3try0, redety30, reezde30, ze, z, y, x, helloz, danha, redee36, rain, huricane, rede36, Blacke30, rede30, blueE30]
 
 //add new ingredient
 
@@ -87,73 +87,32 @@ function affichage(arr){
 
 affichage(carsArr)
 
-// //add to the option list
-
-// // $('#b1').on('click', function(){
-// // 	var strAdded = $('#added').val()
-// // 	var optstr = $('<option></option>')
-// // 	optstr.text(strAdded)
-// // 	optstr.appendTo('#slt')	
-// // })
-
-// //variable containing the result of the search
-
-// var result = [];
-
-
-// function search(arr, key){																
-// 	result = arr.filter(function(element){		
-// 	return !element.ingredients.hasOwnProperty(key)
-// 	})
-// 	return result;
-// }
-
-// var resultOfSearch ;
-
-// $('#search').on('click', function(){																	
-																												
-// var selectedStr = $( "#slt option:selected" ).text();		
-// 	resultOfSearch = undefined;
-//    resultOfSearch = search(meals, selectedStr)	
-   
-//    affichage(resultOfSearch)				
- 
-																																		
-//  })
-
-
-// function lookForObject(obj){
-// 	photoHtml = obj.innerHTML ;	
-//   																																								//this variable takes the html text  
-//   var arrayof= photoHtml.split('')																								//now we extract the image source from that selection  
-//   var newArr = arrayof.slice(arrayof.indexOf('h'),arrayof.length -2).join('') ;		 
-// 																																									//this object will represents the source obj of the image we clicked on
-// for(var i =0; i<meals.length; i++){																								//we loop the meals array and we look for the object that contains the image we clicked on
-// 	if(meals[i].img === newArr){
-// 		objResult = meals[i]																													//whenever we find that object we put it in the variable
-// 	}
-// }
-// }
 
 
 
 
-// $('body').on('click','.imagediv', function() {
-																								 
-// 	console.log($(this.html))
-// 	$('#showelement').show()
-// 	$(this).find('.uldiv').show()
-// 	$('#main').html('')
-// 	$('#showelement').html('')
-// 	$($(this).html()).appendTo('#showelement')
+
+$('body').on('click','.imagediv', function() {																							 
+	console.log($(this.html))
+	$('#showelement').show()
+
+	$('#showelement').find('img').remove()
+	$(this).find('img').appendTo('#showelement')
+	// $($(this).html()).appendTo('#showelement')
 	
-// })
+})
+
+$('.close').on('click', function() { 
+  $('#showelement').hide()
+} )
 
 
-// $('.uldiv').hide()
-// $('#showelement').hide()
 
-// $('body').on('click','#showelement',function(){
-// 	affichage(meals)
-// 	$('#showelement').hide()
-// })
+
+
+
+
+
+
+
+
