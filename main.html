@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>solo project</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
@@ -14,27 +16,43 @@
 			<li><a href="#">Contact us</a></li>
 		</ul></header>
 	</div>
-	<button id="opennav">choose model</button>
- --><div id="main"> this is where the photos go
+	<button id="opennav" class="fa fa-bars"></button>
+ 	<div id="main"> this is where the photos go
 <button id="opennav">open</button></div>
 
 	<div id="navbar">
 
+		<div id="sidebuttonsdiv">
+		<button id="closenav" class="fa fa-close"></button>	
 
-		<button id="closenav">X</button>		
+		<button class="sidebuttons" id="allcars">All</button>
+
  		<button class="sidebuttons" id="e30B">e30</button>
   		<button class="sidebuttons" id="e36B">e36</button>
   	    <button class="sidebuttons" id="e46B">e46</button>
   		<button class="sidebuttons" id="e39B">e39</button>
   		<button class="sidebuttons" id="e34B">e34</button>
-		
+		</div>
 
 	</div>
 
 <div id="showelement" >
   <span class="close">&times;</span>
-  
+  <button class="slide" id="left">left</button>
+  <button class="slide" id="right">right</button>
   <div id="caption"></div>
+</div>
+
+<div id="addCar">
+	<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
 </div>
 	
 
