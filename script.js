@@ -87,8 +87,6 @@ $('body').on('click','.imagediv', function() {
 
 	$('#showelement').find('img').remove()
 	$(this).find('img').appendTo('#showelement')
-	// $($(this).html()).appendTo('#showelement')
-	
 })
 
 $('.close').on('click', function() { 
@@ -132,8 +130,30 @@ $('body').on('click','#allcars', function(){
 
 $('#submitaddcar').on('click',function(){
 	var carname = $('#carName').val()
-console.log(carname)
+	var carmodel = $('#carmodel').val()
+	var carengine = $('carengine').val()
+	var carvalue = $('#carValue').val()
+	var carimage1 = $('#imagelink1').val()
+	var carimage2 = $('#imagelink2').val()
+	var carimage3 = $('#imagelink3').val()
+	var obj = createCar(carname,carmodel, carengine, carvalue, carimage1);
+	carsArr.push(obj)
+	display(carsArr)
+
 })
+
+var cnt = 0 ;
+$('#addcarr').on('click',function(){
+cnt++
+if(cnt===1){
+	$('#addCar').show() 
+}
+else{$('#addCar').hide()
+	cnt = 0 ;
+}
+})
+
+$('#addCar').hide()
 
 
 
