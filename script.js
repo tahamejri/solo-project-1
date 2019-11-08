@@ -151,12 +151,17 @@ else{$('#addCar').hide()
 
 $('#addCar').hide()
 
-var x 
+
+
+
+
+
+
 $('body').on('click','.imagediv', function() {
-x = $(this).find('model')
-	console.log(x);
+            console.log($(this).find('tag'));
+
+        });
 	
-	})
 
 $('#main').hide()
 
@@ -164,3 +169,6 @@ $('#homebtn').on('click',function(){
 	$('#main').show()
 	console.log('homebutton')
 })
+// $(this).children('img').attr('src')
+
+ 
