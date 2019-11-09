@@ -84,6 +84,37 @@ function display(arr){
 }
 }
 
+
+function affichage(arr){
+
+	$('#main').html('')	   
+   for(var i =0; i < arr.length;i++){					
+  var imgdiv = $('<div class ="imagediv"></div>')
+	var img = $('<img id=imageid>')
+	var ingDiv = $('<div class=uldiv><div>')
+	$('#showelement').append(arr[i].name)
+	for(var j in arr[i].ingredients){
+		var str = '<li>' + j + ': ' + arr[i].ingredients[j] + '</li>'
+		ingDiv.append(str)
+	}
+
+    img.attr('src', arr[i].img)
+    
+    imgdiv.append(ingDiv)
+    imgdiv.append(img)
+   $('#main').append(imgdiv)
+}
+}
+
+
+
+
+
+
+
+
+
+
 display(carsArr)
 
 
@@ -96,6 +127,9 @@ $('body').on('click','.imagediv', function() {
 	console.log($(this).html())
 	imagestring = $(this).html() ;
 	lookForObject(imagestring) ;
+	var desc = 'Car Name : ' + objResult['name'] + '<br><br>  ' + 'Car Model: ' + objResult['model'] + '<br><br>  ' + 'Car Value' + objResult['value'] ;
+	$('#description').empty()
+	$('#description').append(desc) ;
 	$(this).find('img').appendTo('#caption') ;
 	$($(this.html)).appendTo('#showelement') ;
 	$('#showelement').show() ;
@@ -107,8 +141,8 @@ $('body').on('click','.imagediv', function() {
 //buttons to slide images
 var i = 0 ;
 $('#left').on('click',function(){
-	if(i === objResult['img'].length-1){
-		i=0
+	if(i ===0) {
+		i=objResult['img'].length-1
 	}
 	else{
  i = i-1 ;

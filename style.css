@@ -37,7 +37,7 @@ header ul li a {
     font-weight: bold;
 }
 header a:hover {
-    color: #d50000;
+    color: white;
 }
 
 
@@ -179,10 +179,12 @@ h1{
   border: solid 1px;
   background-color: white;
   padding: 14px 28px;
-  font-size: 16px;
+  font-size: 17.5px;
+  font-weight: solid;
   cursor: pointer;
   text-align: center;
   margin-left: 0px;
+
   
 }
 #sidebuttonsdiv{
@@ -249,7 +251,7 @@ nav{
   top: 20%;
   bottom: 20%;
   position: absolute;
-  left: 21.5%;
+  left: 30%;
 }
 
 
@@ -257,7 +259,7 @@ nav{
 	position: absolute;
 	width: 25px;
 	height: 50px;
-	left: 250px;
+	left: 28%;
 	top: 45%;
 	opacity:0.3;
 
@@ -266,7 +268,7 @@ nav{
 	position: absolute;
 	width: 25px;
 	height: 50px;
-	right:  320px;
+	left: 67.5%;
 	top: 45%;
 	opacity: 0.3;
 }
@@ -298,5 +300,22 @@ form {
 }
 
 li:hover {
-	background-color: blue;
+	background-color: black;
+}
+
+#caption{
+  position: relative;
+  border:solid ;
+  height: 90%;
+}
+
+#description{
+  height: 25%;
+  width: 25%;
+  position:relative;
+  border:solid ;
+  left:70%;
+  top: 73%;
+  color: gray ;
+  font-size: 25px;
 }
