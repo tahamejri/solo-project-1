@@ -8,6 +8,9 @@
 	justify-content: center;
 	box-sizing: border-box;
 	flex-wrap: wrap;
+	transition: margin-right .5s;
+   
+  
 	
 	}
 header ul {
@@ -49,6 +52,7 @@ body {
   background-image: url("https://wallpaperplay.com/walls/full/9/d/5/321465.jpg");
   background-attachment: fixed;
   background-size: 100%;
+
 }
 
 
@@ -89,6 +93,7 @@ background: #1E2A37;
   position: fixed;
   padding-top: 20px;
   display: none;
+  transition-delay: 2s;
 
     }
 
@@ -111,28 +116,45 @@ background: #1E2A37;
   background-color: white;
 
   }
-
+#navbar #closenav: hover{
+	background-color: red;
+}
 
 
   #opennav{
   	/*background-color: #111;*/
-  	background-color: DodgerBlue;
+  	background-color: transparent;
   	position:fixed;
   	border: solid;
   	width: 5%;
   	height:35px;
   	margin-bottom: 20px;
   	top:10%;
-  	color: white;
+  	color: gray;
   	cursor: pointer;
 
   }
 
 
 #opennav:hover {
-  background-color: #444;
+  /*background-color: #444;*/
+  background-color: red;
 }
 
+
+h1{
+	border: solid red ;
+	height: 100px;
+	z-index: 2;
+	position: absolute ;
+	left:32%;
+	width: 450px;
+	color: white;
+	text-align: center ;
+	padding-top: 25px;
+	font-size: 35px;
+	display:none;
+}
 
 
 
@@ -236,15 +258,17 @@ nav{
 	width: 25px;
 	height: 50px;
 	left: 250px;
-	top: 45%
+	top: 45%;
+	opacity:0.3;
 
 }
 #right {
 	position: absolute;
 	width: 25px;
 	height: 50px;
-	right:  250px;
+	right:  320px;
 	top: 45%;
+	opacity: 0.3;
 }
 
 #addCar{
@@ -273,3 +297,6 @@ form {
 	cursor: pointer
 }
 
+li:hover {
+	background-color: blue;
+}
